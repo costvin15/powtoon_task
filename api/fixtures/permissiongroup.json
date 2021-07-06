@@ -1,0 +1,16 @@
+[
+  {
+    "model": "api.PermissionGroup",
+    "pk": 1,
+    "fields": {
+      "permissions": [3]
+    }
+  },
+  {
+    "model": "api.PermissionGroup",
+    "pk": 2,
+    "fields": {
+      "permissions": [1,2]
+    }
+  }
+]

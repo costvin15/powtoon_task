@@ -18,5 +18,14 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path('', views.powtoon_find_all, name='index')
+    path('user/create', views.user_create, name='user_create'),
+    path('user/read/<int:user_id>', views.user_read, name='user_read'),
+    path('powtoon/create', views.powtoon_create, name='powtoon_create'),
+    path('powtoon/read/<int:user_id>', views.powtoon_read, name='powtoon_read'),
+    path('powtoon/find/<int:user_id>/<int:powtoon_id>', views.powtoon_find_by_id, name='powtoon_find_by_id'),
+    path('powtoon/edit/<int:user_id>/<int:powtoon_id>', views.powtoon_edit, name='powtoon_edit'),
+    path('powtoon/delete/<int:user_id>/<int:powtoon_id>', views.powtoon_delete, name='powtoon_delete'),
+    path('powtoon/my/<int:user_id>', views.powtoon_owned_by_a_user, name='powtoon_owned_by_a_user'),
+    path('powtoon/shared_with_me/<int:user_id>', views.powtoon_shared_to_a_user, name='powtoon_shared_to_a_user'),
+    path('powtoon/share', views.powtoon_share, name='powtoon_share')
 ]
