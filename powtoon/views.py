@@ -1,3 +1,8 @@
-from django.shortcuts import render
+from rest_framework import viewsets
+from powtoon.models import Powtoon
+from powtoon.serializers import PowtoonSerializer
 
-# Create your views here.
+
+class PowtoonViewSet(viewsets.ModelViewSet):
+    queryset = Powtoon.objects.all()
+    serializer_class = PowtoonSerializer
