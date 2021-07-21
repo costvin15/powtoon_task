@@ -1,0 +1,10 @@
+[
+  {
+    "model": "share.Permission",
+    "pk": 1,
+    "fields": {
+      "name": "Allow to share a powtoon",
+      "code": "perm-share-powtoon"
+    }
+  }
+]
