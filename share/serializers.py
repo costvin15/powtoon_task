@@ -1,8 +1,8 @@
 from rest_framework import serializers
-from share.models import PermissionGroup
+from share.models import Group
 
 
 class GroupSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
-        model = PermissionGroup
-        fields = ['name', 'permissions']
+        model = Group
+        fields = ['id', 'name', 'permissions']
