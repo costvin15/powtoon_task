@@ -1,4 +1,5 @@
 import unittest
+from rest_framework import status
 from django.test import Client
 
 
@@ -7,14 +8,18 @@ class UserViewSetTestCase(unittest.TestCase):
         self.client = Client()
 
     def test_register(self):
-        self.client.post('/auth/register', {
+        response = self.client.post('/auth/register/', {
             'email': 'user@user.com',
-            'password1': 'password',
-            'password2': 'password'
+            'password1': 'aIZtrBcF',
+            'password2': 'aIZtrBcF'
         })
 
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+
     def test_login(self):
-        self.client.post('/auth/login', {
+        response = self.client.post('/auth/login/', {
             'email': 'user@user.com',
-            'password': 'password'
+            'password': 'aIZtrBcF'
         })
+
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
