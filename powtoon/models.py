@@ -10,5 +10,8 @@ class Powtoon(models.Model):
 
 
 class PowtoonShared(models.Model):
+    """
+    Represents the sharing relationship of powtoons with users
+    """
     powtoon = models.ForeignKey(Powtoon, on_delete=models.CASCADE)
     user = models.ForeignKey(User, on_delete=models.CASCADE)

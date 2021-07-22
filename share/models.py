@@ -12,5 +12,8 @@ class Group(models.Model):
 
 
 class PermissionGroup(models.Model):
+    """
+    Represents the many to many relationship of a group with a permission.
+    """
     permission = models.ForeignKey(Permission, on_delete=models.CASCADE)
     group = models.ForeignKey(Group, on_delete=models.CASCADE)
