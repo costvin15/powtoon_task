@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'rest_auth.registration',
     'rest_framework',
     'rest_framework.authtoken',
+    'drf_yasg',
     'user',
     'share',
     'powtoon',
