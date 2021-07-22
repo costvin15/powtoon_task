@@ -1,16 +1,28 @@
 Powtoon task
 ==
 
-To start using this small project, please configure your database in powtoon/settings.py
+#### Reminder: To start using this small project, please configure your database in powtoon/settings.py. In this project I used mysql (whose driver is specified in requiments.txt), if you use a different DBMS, please install the driver and specify in settings.py
 
-In this project I used mysql (whose driver is specified in requiments.txt), if you use a different DBMS, please install the driver and specify in settings.py
+### About apps
+- User:
+This app is responsible for API authentication.
+  The API was implemented for use with JWT, so this app generates
+  a valid token that will be used in all apps.
+  
+- Powtoon:
+This app contains the representation of a powtoon,
+  in addition to being responsible for containing all direct
+  interactions with it (such as insertion, editing, deletion, queries).
+  
+- Share:
+This app contains the representation of a permission and a group,
+  and is thus responsible for determining the permissions for a user.
 
-After applying the migration, remember to apply the fixtures:
+
+### How to apply fixtures?:
 ```
-python manage.py loaddata permissions
-python manage.py loaddata permissiongroup
+python manage.py loaddata permission
+python manage.py loaddata group
 ```
 
 Enjoy :)
-
-For more comments, visit api/views.py
