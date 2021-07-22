@@ -3,7 +3,10 @@
     "model": "share.Group",
     "pk": 1,
     "fields": {
-      "name": "Administrator"
+      "name": "Administrator",
+      "permissions": [
+        1, 2
+      ]
     }
   }
 ]

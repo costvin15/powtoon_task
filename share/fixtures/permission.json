@@ -6,5 +6,13 @@
       "name": "Allow to share a powtoon",
       "code": "perm-share-powtoon"
     }
+  },
+  {
+    "model": "share.Permission",
+    "pk": 2,
+    "fields": {
+      "name": "Allow to get a powtoon that is not shared with me and i'm not its owner.",
+      "code": "perm-view-powtoon-not-shared-or-owner"
+    }
   }
 ]
