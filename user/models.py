@@ -19,5 +19,8 @@ class User(AbstractUser):
 
 
 class UserGroup(models.Model):
+    """
+    Represents the many to many relationship of a user with a group.
+    """
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     group = models.ForeignKey(Group, on_delete=models.CASCADE)
