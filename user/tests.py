@@ -23,3 +23,20 @@ class UserViewSetTestCase(unittest.TestCase):
         })
 
         self.assertEqual(response.status_code, status.HTTP_200_OK)
+
+    def become_admin(self):
+        login = self.client.post('/auth/login/', {
+            'email': 'user@user.com',
+            'password': 'aIZtrBcF'
+        })
+
+        self.assertEqual(login.status_code, status.HTTP_200_OK)
+
+        headers = {
+            'HTTP_AUTHORIZATION': 'JWT ' + login.data.get('token')
+        }
+
+        response = self.client.post('/user/1/add_to_group/', {
+            'group': 1
+        }, content_type='application/json', **headers)
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
