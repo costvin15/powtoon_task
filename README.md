@@ -25,4 +25,14 @@ python manage.py loaddata permission
 python manage.py loaddata group
 ```
 
+### About routes
+
+To learn more about routes, see the documentation on the swagger through the /swagger/ route
+
+### About tests
+
+To run the tests, run the User.tests.test_register test first.
+
+Some tests like Powtoon.tests.test_share need a second registered user.
+
 Enjoy :)
