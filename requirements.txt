@@ -8,6 +8,7 @@ cryptography==3.4.7
 defusedxml==0.7.1
 Django==3.2.5
 django-allauth==0.45.0
+django-environ==0.4.5
 django-rest-auth==0.9.5
 djangorestframework==3.12.4
 djangorestframework-jwt==1.11.0
@@ -15,11 +16,13 @@ drf-writable-nested==0.6.3
 drf-yasg==1.20.0
 idna==3.2
 inflection==0.5.1
+install==1.3.4
 itypes==1.2.0
 Jinja2==3.0.1
 MarkupSafe==2.0.1
 mysqlclient==2.0.3
 oauthlib==3.1.1
+openapi-codec==1.3.2
 packaging==21.0
 pycparser==2.20
 PyJWT==1.7.1
@@ -30,6 +33,7 @@ requests==2.26.0
 requests-oauthlib==1.3.0
 ruamel.yaml==0.17.10
 ruamel.yaml.clib==0.2.6
+simplejson==3.17.3
 six==1.16.0
 sqlparse==0.4.1
 typing-extensions==3.10.0.0

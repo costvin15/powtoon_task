@@ -1,7 +1,7 @@
 Powtoon task
 ==
 
-#### Reminder: To start using this small project, please configure your database in powtoon/settings.py. In this project I used mysql (whose driver is specified in requiments.txt), if you use a different DBMS, please install the driver and specify in settings.py
+#### Reminder: To start using this project, configure the app/.env file
 
 ### About apps
 - User:
