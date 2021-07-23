@@ -14,7 +14,7 @@ class UserViewSetTestCase(unittest.TestCase):
             'password2': 'aIZtrBcF'
         })
 
-        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        self.assertEqual(response.status_code, status.HTTP_201_CREATED)
 
     def test_login(self):
         response = self.client.post('/auth/login/', {
