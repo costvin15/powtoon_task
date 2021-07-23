@@ -1,10 +1,10 @@
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
-from powtoon import views
+from share import views
 
 router = DefaultRouter()
-router.register(r'powtoon', views.PowtoonViewSet)
+router.register(r'share/group', views.GroupViewSet)
 
 urlpatterns = [
-    path('', include(router.urls))
+    path('', include(router.urls)),
 ]
